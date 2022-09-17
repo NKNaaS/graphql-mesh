@@ -2080,6 +2080,14 @@
     "@graphql-tools/utils" "^8.8.0"
     tslib "^2.4.0"
 
+"@envelop/generic-auth@4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@envelop/generic-auth/-/generic-auth-4.5.0.tgz#2025a008f5ceec653c4f404907966a3febaa6263"
+  integrity sha512-outYr5vQjzliGmlMUG0t0k0PLkwbgwb0ZLVnRgRvyZZknW5wlS3wCCs5sYcdvpwv3fEsRih2l6yE/yGxG4Micw==
+  dependencies:
+    "@envelop/extended-validation" "^1.9.0"
+    tslib "^2.4.0"
+
 "@envelop/live-query@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@envelop/live-query/-/live-query-4.2.0.tgz#170249026addcf07a58813dcbdb948e9b3c9f711"

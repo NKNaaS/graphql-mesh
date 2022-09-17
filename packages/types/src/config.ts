@@ -1725,6 +1725,7 @@ export interface PubSubConfig {
 export interface Plugin {
   maskedErrors?: MaskedErrorsPluginConfig;
   immediateIntrospection?: any;
+  genericAuth?: GenericAuthConfig;
   liveQuery?: LiveQueryConfig;
   mock?: MockingConfig;
   newrelic?: NewrelicConfig;
@@ -1737,6 +1738,18 @@ export interface Plugin {
 }
 export interface MaskedErrorsPluginConfig {
   errorMessage?: string;
+}
+export interface GenericAuthConfig {
+  /**
+   * Any of: String, AdditionalStitchingResolverObject, AdditionalStitchingBatchResolverObject
+   */
+  resolveUser: string | AdditionalStitchingResolverObject | AdditionalStitchingBatchResolverObject;
+  contextFieldName?: string;
+  /**
+   * Allowed values: protectAll, protectGranular, resolveOnly
+   */
+  mode?: 'protectAll' | 'protectGranular' | 'resolveOnly';
+  directiveOrExtensionFieldName?: string;
 }
 export interface LiveQueryConfig {
   /**
