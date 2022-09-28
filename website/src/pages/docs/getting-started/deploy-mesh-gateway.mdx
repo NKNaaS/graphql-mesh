@@ -75,6 +75,7 @@ Then, we can create a Lambda as it follows:
 ```ts filename="graphql.ts"
 import type { Handler } from '@aws-cdk/aws-lambda'
 import { configure } from '@vendia/serverless-express'
+import express from '@vendia/serverless-express/src/frameworks/express'
 import { createBuiltMeshHTTPHandler } from './.mesh'
 
 const app = createBuiltMeshHTTPHandler()
@@ -82,6 +83,7 @@ const app = createBuiltMeshHTTPHandler()
 export const handler: Handler = configure({
   // Pass Mesh HTTP handler as app
   app,
+  framework: express,
 })
 ```
 
